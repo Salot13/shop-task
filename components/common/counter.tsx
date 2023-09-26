@@ -7,7 +7,7 @@ function Counter() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div style={{margin: 50}}>
       <h1>Counter: {count}</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrement</button>
