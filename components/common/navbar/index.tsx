@@ -38,16 +38,14 @@ const navItems = [
   'THE EDIT',
 
   'NEW ARRIVALS',
-
   'DESIGNERS',
-
   'CLOTHING',
-
   'SHOES',
-
   'BAGS',
-
-  'ACCESSORIES,JEWERY,BEAUTY,HOME',
+  'ACCESSORIES',
+  'JEWERY',
+  'BEAUTY',
+  'HOME',
 ];
 
 const NavBar = (props: Props) => {

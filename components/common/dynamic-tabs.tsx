@@ -1,11 +1,16 @@
-"use client"
+'use client';
+
 import React, { ReactNode } from 'react';
+
 import { AppBar, Box, Tab, Tabs, Typography } from '@mui/material';
-import { tabPanel } from '.';
+
+import { tabPanel, tabsDescription } from '.';
 
 interface TabPanelProps {
   children?: ReactNode;
+
   index: number;
+
   value: number;
 }
 
@@ -15,9 +20,10 @@ function TabPanel({ children, value, index }: TabPanelProps) {
       role="tabpanel"
       hidden={value !== index}
       id={`tabpanel-${index}`}
+      className={tabsDescription}
       aria-labelledby={`tab-${index}`}
     >
-      {value === index && <Box >{children}</Box>}
+      {value === index && <Box className="tab-description">{children}</Box>}
     </div>
   );
 }
@@ -35,16 +41,14 @@ const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
 
   return (
     <div className={tabPanel}>
-      <AppBar
-        position="static"
-        className="tab-container"
-      >
+      <AppBar position="static" className="tab-container">
         <Tabs value={value} onChange={handleChange} variant="fullWidth" centered>
           {tabs.map((tab, index) => (
             <Tab key={index} label={tab.label} id={`tab-${index}`} />
           ))}
         </Tabs>
       </AppBar>
+
       {tabs.map((tab, index) => (
         <TabPanel key={index} value={value} index={index}>
           {tab.content}
