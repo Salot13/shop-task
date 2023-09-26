@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import Counter from '../components/common/counter';
 import DynamicTabs from '../components/common/dynamic-tabs';
 import CartSection from '../components/common/cart-section';
 import { Box, Grid, Typography } from '@mui/material';
@@ -100,8 +99,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <Counter />
-      <Grid container spacing={2} px={"71px"} mt={10}>
+      <Grid container spacing={2} px={'71px'} mt={10}>
         <Grid item xs={4}>
           <div style={{ position: 'sticky', top: '100px', zIndex: 1 }}>
             <DynamicTabs tabs={tabs} />
@@ -120,9 +118,11 @@ export default function Home() {
       </Grid>
       <div className={footerSection}>
         <div className="product">ViEW MOR PRODUCT LIKE THIS</div>
-        <div style={{  display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           {productName?.map((data, index) => (
-            <div className="products-name" key={`${index}`}>{data}</div>
+            <div className="products-name" key={`${index}`}>
+              {data}
+            </div>
           ))}
         </div>
         <div className="author-note">

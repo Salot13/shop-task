@@ -1,11 +1,6 @@
-export const increment = () => {
+export const increment = (data) => {
   return {
-    type: 'INCREMENT',
-  };
-};
-
-export const decrement = () => {
-  return {
-    type: 'DECREMENT',
+    type: 'TAB_SELECTION',
+    count: data,
   };
 };

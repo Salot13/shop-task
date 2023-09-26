@@ -23,7 +23,7 @@ export const tabPanel = css`
     }
 
     .MuiTabs-indicator {
-      background-color: transparent !important;
+      background-color: black !important;
     }
   }
 `;
@@ -256,6 +256,7 @@ export const footerSection = css`
       line-height: 120%; /* 16.8px */
       text-transform: capitalize;
       text-align: center;
+      font-family: Helvetica Now Text;
     }
   }
 `;

@@ -1,10 +1,12 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 
 import { AppBar, Box, Tab, Tabs, Typography } from '@mui/material';
 
 import { tabPanel, tabsDescription } from '.';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment } from '../../contexts/actions/counterActions';
 
 interface TabPanelProps {
   children?: ReactNode;
@@ -34,9 +36,15 @@ interface DynamicTabsProps {
 
 const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
   const [value, setValue] = React.useState(0);
+  const count = useSelector((state: any) => state.count);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    setValue(count);
+  }, [count]);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    dispatch(increment(newValue));
   };
 
   return (
