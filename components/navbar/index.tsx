@@ -68,7 +68,9 @@ const NavBar = (props: Props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              sx={{ textAlign: 'center', fontFamily: 'Helvetica Now Text', color: 'red' }}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -110,7 +112,11 @@ const NavBar = (props: Props) => {
 
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} className={categroiesName} sx={{ color: '#000000' }}>
+              <Button
+                key={item}
+                className={categroiesName}
+                sx={{ color: '#000000', fontFamily: 'Helvetica Now Text' }}
+              >
                 {item}
               </Button>
             ))}
