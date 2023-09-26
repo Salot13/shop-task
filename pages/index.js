@@ -4,92 +4,10 @@ import styles from '../styles/Home.module.css';
 import DynamicTabs from '../components/common/dynamic-tabs';
 import CartSection from '../components/common/cart-section';
 import { Box, Grid, Typography } from '@mui/material';
-import NavBar from '../components/common/navbar';
+import NavBar from '../components/navbar';
 import { footerSection } from '../components/common';
+import { productName, tabsData, images } from '../utils/mock-data';
 
-const productName = ['Jonathan Simkhai', 'Blazers', 'Viscose'];
-
-const tabs = [
-  {
-    label: 'Details',
-
-    content: (
-      <>
-        <Typography
-          sx={{
-            color: '#000',
-
-            fontFamily: 'Roboto',
-
-            fontSize: '14px',
-
-            fontStyle: 'normal',
-
-            fontWeight: '400',
-
-            lineHeight: '19.6px ',
-          }}
-        >
-          The Forte Lurex Linen Viscose Jacket in Mother of Pearl features lunar lavishness by night
-          and by day: a blazer in a linen blend shot with lurex for a shimmering surface that shines
-          like a star in the sky. it has a straight fit with well defined shoulders and a shawl
-          collar culminating in a button and has been flawlessly finished with three jet pockets
-          with a sartorial feel.
-        </Typography>
-
-        <Box
-          sx={{
-            mt: 2,
-
-            display: 'flex',
-
-            gap: 2,
-
-            color: '#000',
-
-            fontFamily: 'Roboto',
-
-            fontSize: '14px',
-
-            fontStyle: 'normal',
-
-            fontWeight: 400,
-
-            lineHeight: '19.6px ',
-          }}
-        >
-          <Typography>
-            See the{' '}
-            <a href="#" target="_blank" style={{ textDecoration: 'underline' }}>
-              EDITOR’S NOTE
-            </a>
-          </Typography>
-        </Box>
-
-        <Box sx={{ mt: 2 }}>
-          <Typography>
-            Learn about The{' '}
-            <a href="#" target="_blank" style={{ textDecoration: 'underline' }}>
-              DESIGNER
-            </a>
-          </Typography>
-        </Box>
-      </>
-    ),
-  },
-
-  { label: 'Delivery', content: <Typography>Content of Tab 2</Typography> },
-
-  { label: 'Fit', content: <Typography>Content of Tab 3</Typography> },
-
-  { label: 'Share', content: <Typography>Content of Tab 3</Typography> },
-];
-
-const images = [
-  { src: '../image1.png', alt: 'product-image1', width: '462px' },
-  { src: '../image 2.png', alt: 'product-image2', width: '462px' },
-  { src: '../image 3.png', alt: 'product-image3', width: '562px' },
-];
 export default function Home() {
   return (
     <div>
@@ -102,7 +20,7 @@ export default function Home() {
       <Grid container spacing={2} px={'71px'} mt={10}>
         <Grid item xs={4}>
           <div style={{ position: 'sticky', top: '100px', zIndex: 1 }}>
-            <DynamicTabs tabs={tabs} />
+            <DynamicTabs tabs={tabsData} />
           </div>
         </Grid>
         <Grid item xs={4} sx={{ width: '200px' }}>

@@ -24,7 +24,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import Person4OutlinedIcon from '@mui/icons-material/Person4Outlined';
 
-import { categroiesName, companyName } from './';
+import { categroiesName, companyName } from '.';
 
 // import SearchIcon from '../../icons/Search.svg';
 
