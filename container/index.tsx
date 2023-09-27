@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Grid, IconButton } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { hideOnMobile, hideDesktop } from '../components/common/commonStyle';
 import CartSection from '../components/common/cart-section';
 import DynamicTabs from '../components/common/dynamic-tabs';
 import ImageSlider from '../components/common/image-slider';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { tabsData, productImages } from '../utils/mock-data';
+import HeartSection from '../components/common/heart-section';
 
 const HomePage = () => {
   const [isFavourite, setIsFavourite] = useState<boolean>(false);
@@ -18,28 +17,7 @@ const HomePage = () => {
         </div>
       </Grid>
       <Grid item lg={4} sm={12} width="200px" className={hideOnMobile}>
-        <div
-          style={{
-            display: 'flex',
-            position: 'sticky',
-            width: '100%',
-            justifyContent: 'end',
-            top: '100px',
-            zIndex: 1,
-          }}
-        >
-          <IconButton
-            onClick={() => {
-              setIsFavourite(!isFavourite);
-            }}
-          >
-            {!isFavourite ? (
-              <FavoriteBorderIcon sx={{ color: '#000000' }} />
-            ) : (
-              <FavoriteIcon sx={{ color: 'red' }} />
-            )}
-          </IconButton>
-        </div>
+        <HeartSection isFavourite={isFavourite} setIsFavourite={setIsFavourite} />
         {productImages.map((image, index) => (
           <img
             key={index}
@@ -55,6 +33,7 @@ const HomePage = () => {
           display={{ xs: 'block', sm: 'block', md: 'none' }}
           sx={{ minWidth: '475px', minHeight: 640 }}
         >
+          <HeartSection isFavourite={isFavourite} setIsFavourite={setIsFavourite} />
           <ImageSlider />
         </Box>
       </Grid>
