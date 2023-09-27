@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import Person4OutlinedIcon from '@mui/icons-material/Person4Outlined';
+import UserIcon from '@mui/icons-material/Person4Outlined';
 import { drawerWidth, navItems } from '../../utils/mock-data';
 import { categroiesName, companyName } from '.';
 interface Props {
@@ -35,7 +35,7 @@ const NavBar = (props: Props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MY COMPANY.COM
+        SHOP BAZZAR
       </Typography>
       <Divider />
       <List>
@@ -69,7 +69,7 @@ const NavBar = (props: Props) => {
               className={companyName}
               sx={{ flexGrow: 1, display: { sm: 'flex' }, cursor: 'pointer' }}
             >
-              MY COMPANY.NAME
+              SHOP BAZZAR
             </Typography>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
@@ -88,10 +88,10 @@ const NavBar = (props: Props) => {
             ))}
           </Box>
           <Box sx={{ display: 'flex', cursor: 'pointer', alignItems: 'center' }}>
-            <SearchIcon />
-            <ShoppingCartOutlinedIcon />
+            <SearchIcon sx={{ mr: 2 }} />
+            <ShoppingCartOutlinedIcon sx={{ mr: 2 }} />
             <Box sx={{ display: { xs: 'none', sm: 'block', lg: 'flex' }, alignItems: 'center' }}>
-              <Person4OutlinedIcon />
+              <UserIcon sx={{ mr: 2 }} />
             </Box>
             <IconButton
               color="inherit"

@@ -1,12 +1,15 @@
-import React from 'react';
-import { Box, Grid } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Grid, IconButton } from '@mui/material';
 import { hideOnMobile, hideDesktop } from '../components/common';
 import CartSection from '../components/common/cart-section';
 import DynamicTabs from '../components/common/dynamic-tabs';
 import ImageSlider from '../components/common/image-slider';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { tabsData, productImages } from '../utils/mock-data';
 
 const HomePage = () => {
+  const [isFavourite, setIsFavourite] = useState<boolean>(false);
   return (
     <Grid container px={{ md: '18px', xs: '18px', lg: '71px' }} mt={{ lg: 10 }}>
       <Grid item lg={4} sm={12} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
@@ -15,6 +18,28 @@ const HomePage = () => {
         </div>
       </Grid>
       <Grid item lg={4} sm={12} width="200px" className={hideOnMobile}>
+        <div
+          style={{
+            display: 'flex',
+            position: 'sticky',
+            width: '100%',
+            justifyContent: 'end',
+            top: '100px',
+            zIndex: 1,
+          }}
+        >
+          <IconButton
+            onClick={() => {
+              setIsFavourite(!isFavourite);
+            }}
+          >
+            {!isFavourite ? (
+              <FavoriteBorderIcon sx={{ color: '#000000' }} />
+            ) : (
+              <FavoriteIcon sx={{ color: 'red' }} />
+            )}
+          </IconButton>
+        </div>
         {productImages.map((image, index) => (
           <img
             key={index}

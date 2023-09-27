@@ -32,7 +32,6 @@ const TabPanel = ({ children, value, index }: TabPanelProps) => {
 const DynamicTabs: FC<DynamicTabsProps> = ({ tabs }) => {
   const [tabValue, setTabValue] = useState<number>(0);
   const selectedTab = useSelector((state: { selectedTab: number }) => state.selectedTab);
-
   const dispatch = useDispatch();
 
   useEffect(() => {

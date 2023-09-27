@@ -22,7 +22,6 @@ export const tabsData = [
           collar culminating in a button and has been flawlessly finished with three jet pockets
           with a sartorial feel.
         </Typography>
-
         <Box
           sx={{
             mt: 2,
@@ -43,7 +42,6 @@ export const tabsData = [
             </a>
           </Typography>
         </Box>
-
         <Box sx={{ mt: 2 }}>
           <Typography>
             Learn about The{' '}
@@ -56,16 +54,47 @@ export const tabsData = [
     ),
   },
 
-  { label: 'Delivery', content: <Typography>Content of Tab 2</Typography> },
-
-  { label: 'Fit', content: <Typography>Content of Tab 3</Typography> },
-
-  { label: 'Share', content: <Typography>Content of Tab 3</Typography> },
+  {
+    label: 'Delivery',
+    content: (
+      <Typography>
+        The Forte Lurex Linen Viscose Jacket in Mother of Pearl features lunar lavishness by night
+        and by day: a blazer in a linen blend shot with lurex for a shimmering surface that shines
+        like a star in the sky. it has a straight fit with well defined shoulders and a shawl collar
+        culminating in a button and has been flawlessly finished with three jet pockets with a
+        sartorial feel. See the EDITOR’S NOTE Learn about the DESIGNER
+      </Typography>
+    ),
+  },
+  {
+    label: 'Fit',
+    content: (
+      <Typography>
+        Wake up dull and tired-looking skin with this weekly ritual. Vitamin C-rich Java Plum Mango
+        and Banana extracts combine with Wintergreen derived Beta Hydroxy Acid (BHA) to gently
+        exfoliate dead skin cells and improve skin brightness and clarity. Kaolin and Bentonite
+        Clays help clear pores and absorb excess sebum while Jasmine and Burdock Root extracts work
+        to leave skin soothed soft supple and luminous.
+      </Typography>
+    ),
+  },
+  {
+    label: 'Share',
+    content: (
+      <Typography>
+        Kaolin and Bentonite Clays help clear pores and absorb excess sebum while Jasmine and
+        Burdock Root extracts work to leave skin soothed soft supple and luminous. How to Use: Apply
+        a thin layer to freshly cleansed skin avoiding the immediate eye area. Allow the mask up to
+        five minutes to reveal a red-carpet glow then gently rinse with warm water. Use two to three
+        times weekly for optimal results (once a week for sensitive skin). For external use only
+      </Typography>
+    ),
+  },
 ];
 export const productImages = [
   { src: '../product-image-1.png', alt: 'product-image-1', width: '375px' },
-  { src: '../product-image-2.png', alt: 'product-image-2', width: '375px' },
   { src: '../product-image-5.png', alt: 'product-image-5', width: '420px' },
+  { src: '../product-image-2.png', alt: 'product-image-2', width: '375px' },
   { src: '../product-image-4.png', alt: 'product-image-3', width: '375px' },
 ];
 

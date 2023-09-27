@@ -92,6 +92,7 @@ export const tabsDescription = css`
 
 export const cartSection = css`
   .cart-section {
+    margin-top: 95px;
     .product-name,
     .product-description,
     .product-color,
@@ -117,6 +118,7 @@ export const cartSection = css`
     }
     .product-color {
       padding-top: 24px;
+      align-items: center;
       ${commonDisplayStyle}
       gap: 8px;
       ${commonFontstyle}
@@ -124,12 +126,14 @@ export const cartSection = css`
     }
     .product-image {
       ${commonDisplayStyle}
+      cursor: pointer;
       padding-top: 8px;
       img {
         width: 41.8px;
         height: 47.824px;
       }
       .selected-image {
+        margin: 0 4px;
         border: 1px solid #000;
       }
     }

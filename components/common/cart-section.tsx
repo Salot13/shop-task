@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import React, { useEffect, useState } from 'react';
 import { cartSection } from '.';
 import { Button, Chip, Typography } from '@mui/material';
@@ -9,8 +11,8 @@ const CartSection = () => {
   const [selectedSize, setSelectedSize] = useState<string>('L');
   const [selectedImage, setSelectedImage] = useState<number>(0);
 
-  const size = useSelector((state: any) => state.size);
-  const color = useSelector((state: any) => state.color);
+  const size = useSelector((state: { size: string }) => state.size);
+  const color = useSelector((state: { color: number }) => state.color);
 
   const dispatch = useDispatch();
 
@@ -33,39 +35,31 @@ const CartSection = () => {
     <div className={cartSection}>
       <div className="cart-section">
         <div className="product-name">JONATHAN SIMKHAI</div>
-
         <div className="product-description">Lurex Linen Viscose Jacket in Conchiglia</div>
-
         <div className="product-price">$225</div>
-
-        <div className="">
-          <div className="product-color">
-            Color <Typography>Conchiglia</Typography>{' '}
-          </div>
-
-          <div className="product-image">
-            {productColorImages.map((data, index) => {
-              return (
-                <img
-                  key={index}
-                  src={data}
-                  alt="product-image "
-                  onClick={() => handleSelectImage(index)}
-                  className={selectedImage === index ? 'selected-image' : ''}
-                />
-              );
-            })}
-          </div>
+        <div className="product-color">
+          Color <Typography>Conchiglia</Typography>{' '}
         </div>
-
+        <div className="product-image">
+          {productColorImages.map((data, index) => {
+            return (
+              <img
+                loading="lazy"
+                key={index}
+                src={data}
+                alt="product-image"
+                onClick={() => handleSelectImage(index)}
+                className={selectedImage === index ? 'selected-image' : ''}
+              />
+            );
+          })}
+        </div>
         <div className="product-size">
           <div className="commonStyle">
             Size <div className="sizeType">l</div>
           </div>
-
           <div className="sizeGuide">Size Guide</div>
         </div>
-
         <div style={{ display: 'flex' }}>
           {productSize.map((data, index) => (
             <div
@@ -89,7 +83,6 @@ const CartSection = () => {
             </div>
           ))}
         </div>
-
         <Button fullWidth className="addToBagStyle">
           Add to bag
         </Button>
@@ -97,7 +90,6 @@ const CartSection = () => {
         <div className="learnMore">
           Get 4 interest-free payments of $196.25 with Klarna LEARN MORE
         </div>
-
         <div className="learnMore">Speak to a Personal Stylist CHAT NOW</div>
       </div>
     </div>

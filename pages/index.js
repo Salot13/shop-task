@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import  HomePage  from '../container/index';
+import HomePage from '../container/index';
 
 export default function Home() {
   return (
