@@ -9,6 +9,8 @@ const ImageSlider = () => {
     dots: true,
     infinite: true,
     speed: 200,
+    autoplay: true,
+    autoplaySpeed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

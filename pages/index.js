@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <Grid container px={'71px'} mt={10}>
+      <Grid container px={{ md: '18px', xs: '18px', lg: '71px' }} mt={{ lg: 10 }}>
         <Grid
           item
           lg={4}
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
         </Grid>
         <Grid item lg={4} sm={12} className={hideDesktop}>
-          <div style={{ position: 'sticky', top: '100px', zIndex: 1 }}>
+          <div style={{ position: 'sticky', top: '100px', marginTop: '64px', zIndex: 1 }}>
             <DynamicTabs tabs={tabsData} />
           </div>
         </Grid>

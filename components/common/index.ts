@@ -71,7 +71,7 @@ export const cartSection = css`
 
   .product-color {
     padding-top: 24px;
-    
+    align-items: center;
     display: flex;
     gap: 8px;
     font-weight: 700;
