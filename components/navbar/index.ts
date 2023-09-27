@@ -3,7 +3,7 @@ import { css } from '@emotion/css';
 export const companyName = css`
   color: #000;
 
-  font-family: Roboto;
+  font-family: 'Helvetica';
 
   font-size: 20px;
 

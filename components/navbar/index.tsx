@@ -68,9 +68,7 @@ const NavBar = (props: Props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: 'center', fontFamily: 'Helvetica Now Text', color: 'red' }}
-            >
+            <ListItemButton sx={{ textAlign: 'center', fontFamily: 'Helvetica Now Text' }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -104,7 +102,7 @@ const NavBar = (props: Props) => {
               variant="h6"
               component="div"
               className={companyName}
-              sx={{ flexGrow: 1, display: { sm: 'flex' } }}
+              sx={{ flexGrow: 1, display: { sm: 'flex' }, cursor: 'pointer' }}
             >
               MY COMPANY.NAME
             </Typography>
@@ -115,18 +113,20 @@ const NavBar = (props: Props) => {
               <Button
                 key={item}
                 className={categroiesName}
-                sx={{ color: '#000000', fontFamily: 'Helvetica Now Text' }}
+                sx={{
+                  color: '#000000',
+                  fontFamily: 'Helvetica Now Text',
+                  ':hover': { textDecoration: 'underLine', },
+                }}
               >
                 {item}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ display: 'flex' }}>
+          <Box sx={{ display: 'flex', cursor: 'pointer' }}>
             <SearchIcon />
-
             <ShoppingCartOutlinedIcon />
-
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <Person4OutlinedIcon />
             </Box>

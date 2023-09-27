@@ -9,11 +9,10 @@ export const tabsData = [
         <Typography
           sx={{
             color: '#000',
-            fontFamily: 'Roboto',
-            fontSize: '14px',
+            fontFamily: 'Helvetica',
+            fontSize: '16px',
             fontStyle: 'normal',
             fontWeight: '400',
-
             lineHeight: '19.6px ',
           }}
         >
@@ -27,21 +26,13 @@ export const tabsData = [
         <Box
           sx={{
             mt: 2,
-
             display: 'flex',
-
             gap: 2,
-
             color: '#000',
-
-            fontFamily: 'Roboto',
-
-            fontSize: '14px',
-
+            fontFamily: 'Helvetica',
+            fontSize: '16px',
             fontStyle: 'normal',
-
             fontWeight: 400,
-
             lineHeight: '19.6px ',
           }}
         >

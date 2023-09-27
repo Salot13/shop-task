@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { cartSection } from '.';
 
 import { Button, Chip, Typography } from '@mui/material';
 
 const CartSection = () => {
+  const [selectedSize, setSelectedSize] = useState('');
+
+  const handleChipClick = (clickedData) => {
+    setSelectedSize(clickedData);
+    console.log(`Chip clicked! Value: ${clickedData}`);
+  };
+
   return (
     <div className={cartSection}>
       <div className="cart-section">
@@ -36,17 +43,36 @@ const CartSection = () => {
 
         <div style={{ display: 'flex' }}>
           {['XS', 'S', 'M', 'L', 'XXL'].map((data) => (
-            <div style={{ marginRight: 12, display: 'flex' }}>
-              <Chip label={data} className="chipStyle" />
+            <div
+              style={{
+                marginRight: 12,
+                display: 'flex',
+                marginBottom: '14px',
+                marginTop: '11px',
+                flexWrap: 'wrap',
+              }}
+            >
+              {data !== 'M' && (
+                <Chip
+                  label={data}
+                  onClick={() => handleChipClick(data)}
+                  className={selectedSize === data ? 'selectedSize' : 'chipStyle'}
+                />
+              )}
+              {data === 'M' && <Chip label={data} className="sizeDisabled" />}
             </div>
           ))}
         </div>
 
-        <Button>Add to bag</Button>
+        <Button fullWidth className="addToBagStyle">
+          Add to bag
+        </Button>
 
-        <div>Get 4 interest-free payments of $196.25 with Klarna LEARN MORE</div>
+        <div className="learnMore">
+          Get 4 interest-free payments of $196.25 with Klarna LEARN MORE
+        </div>
 
-        <div>Speak to a Personal Stylist CHAT NOW</div>
+        <div className="learnMore">Speak to a Personal Stylist CHAT NOW</div>
       </div>
     </div>
   );

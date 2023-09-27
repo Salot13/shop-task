@@ -3,212 +3,243 @@ import { css } from '@emotion/css';
 export const tabPanel = css`
   .tab-container {
     background-color: transparent;
-
     color: black;
-
     box-shadow: none;
+    text-decoration: none;
+  }
 
-    .Mui-selected {
-      color: black !important;
+  .tab-container .Mui-selected,
+  .tab-container .MuiTab-root,
+  .tab-container .MuiTabs-indicator {
+    font-size: 14px !important;
+    align-items: center !important;
+  }
 
-      font-weight: 700;
+  .tab-container .Mui-selected {
+    color: black !important;
+    font-weight: 700;
+  }
 
-      font-size: 14px;
-    }
+  .tab-container .MuiTabs-indicator {
+    background-color: black !important;
+  }
 
-    .MuiTab-root {
-      font-size: 14px !important;
-
-      -webkit-align-items: start;
-    }
-
-    .MuiTabs-indicator {
-      background-color: black !important;
-    }
+  .tab-container .MuiTab-root {
+    -webkit-align-items: start;
   }
 `;
 
 export const tabsDescription = css`
   color: #000;
-
-  font-family: Roboto !important;
-
-  font-size: 14px;
-
-  font-style: normal;
-
   font-weight: 400;
-
-  line-height: 19.6px;
+  line-height: 20px;
+  margin-top: 24px;
 `;
 
 export const cartSection = css`
-  .cart-section {
-    .product-name {
-      color: #000;
 
-      font-family: Roboto;
+.cart-section {
+  .product-name,
+  .product-description,
+  .product-color,
+  .product-price,
+  .product-size,
+  .sizeGuide,
+  .sizeType,
+  .learnMore {
+    color: #000;
+  }
 
-      font-size: 48px;
+  .product-name {
+    font-size: 48px;
+    width: 288px;
+    font-weight: 400;
+    line-height: 96%;
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
 
-      width: 288px;
-
-      font-style: normal;
-
-      font-weight: 400;
-
-      line-height: 96%;
-
-      letter-spacing: -1.92px;
-
-      text-transform: uppercase;
+    @media (max-width: 768px) {
+      width: 440px;
     }
+  }
 
-    .product-description {
-      color: #000000;
+  .product-description {
+    
+    font-weight: 400;
+    line-height: 17px;
+  }
 
-      font-family: Roboto;
+  .product-color {
+    padding-top: 24px;
+    
+    display: flex;
+    gap: 8px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
 
-      font-size: 14px;
+  .product-image {
+    display: flex;
+    padding-top: 8px;
+  }
 
-      font-style: normal;
+  .product-price {
+    font-weight: 700;
+    line-height: 16.8px;
+    padding-top: 8px;
+    text-transform: uppercase;
+  }
 
-      font-weight: 400;
+  .product-size {
+    display: flex;
+    margin-top: 24px;
+    justify-content: space-between;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    
+  }
 
-      margin-top: 4px;
+  .sizeGuide {
+    font-weight: 400;
+    text-decoration-line: underline;
+  }
 
-      line-height: 17px;
-    }
+  .sizeType {
+    font-weight: 400;
+    line-height: 120%;
+  }
 
-    .product-color {
-      padding-top: 24px;
+  .commonStyle {
+    display: flex;
+    gap: 8px;
+  }
 
-      color: var(--Bazaar-Black, #000);
+  .chipStyle,
+  .sizeDisabled,
+  .selectedSize {
+    width: 78px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--White, #fff);
+    
+  }
 
-      font-family: Roboto;
+  .chipStyle {
+    border: 1px solid var(--Light-Grey, #e5e5e5);
+    padding-left: 4px;
+  }
 
-      font-size: 16px;
+  .sizeDisabled {
+    border: 1px solid var(--Light-Grey, #e5e5e5);
+    color: #a6a6a6;
+    position: relative;
+  }
 
-      display: flex;
+  .sizeDisabled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 38px;
+    width: 2px;
+    height: 100%;
+    transform: rotate(68deg);
+    background-color: #a6a6a6;
+  }
 
-      gap: 8px;
+  .selectedSize {
+    border: 1px solid var(--Bazaar-Black, #000);
+    background: var(--Bazaar-Black, #000);
+    color: #ffffff;
+  }
 
-      font-style: normal;
+  .addToBagStyle {
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 0.999px solid var(--Bazaar-Black, #000);
+    background: var(--Bazaar-Black, #000);
+    color: var(--White, #fff);
+    font-weight: 400;
+    padding: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-top: 24px;
+    
+  }
 
-      font-weight: 700;
+  .learnMore {
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 24px;
+  }
+}
 
-      line-height: 120%; /* 16.8px */
+.footerSection {
+  min-width: 500px;
+  padding: 18px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 79.8px;
+}
 
-      text-transform: uppercase;
-    }
+.footerSection .product,
+.footerSection .products-name {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
 
-    .product-image {
-      display: flex;
+.footerSection .products-name {
+  margin-top: 12px;
+  text-decoration-line: underline;
+  margin-right: 24px;
+}
 
-      padding-top: 8px;
-    }
+.footerSection .note {
+  text-align: center;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
 
-    .product-price {
-      color: #000;
+.footerSection .note-description {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 16px 0;
 
-      font-family: Roboto;
+  @media (max-width: 768px) {
+    padding: 0;
+    padding-left: 67px;
+  }
+}
 
-      font-size: 14px;
+.footerSection .author {
+  color: #000;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: capitalize;
+  text-align: center;
+  
+}
 
-      font-style: normal;
-
-      font-weight: 700;
-
-      line-height: 16.8px;
-
-      padding-top: 8px;
-
-      text-transform: uppercase;
-    }
-
-    .product-size {
-      display: flex;
-
-      margin-top: 24px;
-
-      justify-content: space-between;
-
-      color: var(--Bazaar-Black, #000);
-
-      font-family: Helvetica Now Text;
-
-      font-size: 14px;
-
-      font-style: normal;
-
-      font-weight: 700;
-
-      line-height: 120%;
-
-      text-transform: uppercase;
-    }
-
-    .sizeGuide {
-      color: #000;
-
-      font-family: Helvetica Now Text;
-
-      font-size: 14px;
-
-      font-style: normal;
-
-      font-weight: 400;
-
-      text-decoration-line: underline;
-    }
-
-    .sizeType {
-      color: var(--Bazaar-Black, #000);
-
-      font-family: Helvetica Now Text;
-
-      font-size: 14px;
-
-      font-style: normal;
-
-      font-weight: 400;
-
-      line-height: 120%;
-    }
-
-    .commonStyle {
-      display: flex;
-
-      gap: 8px;
-    }
-
-    .chipStyle {
-      border-radius: 100px;
-
-      border: 1px solid var(--Light-Grey, #e5e5e5);
-
-      background: var(--White, #fff);
-
-      width: 78px;
-
-      padding-left: 4px;
-
-      height: 30px;
-    }
   }
 `;
 
 export const footerSection = css`
-  width: 100%;
+  min-width:500px;
+  padding:18px
   text-align: center;
   justify-content: center;
   margin-top: 79.8px;
   .product {
     color: #000;
     text-align: center;
-    font-family: Helvetica Now Text;
-    font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 16.8px */
     text-transform: uppercase;
@@ -217,9 +248,7 @@ export const footerSection = css`
     margin-top: 12px;
     color: #000;
     text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
+    
     font-weight: 400;
     line-height: 120%; /* 16.8px */
     text-decoration-line: underline;
@@ -230,33 +259,42 @@ export const footerSection = css`
     margin-top: 120px;
     .note {
       text-align: center;
-      font-family: Roboto;
-      font-size: 14px;
-      font-style: normal;
+      
       font-weight: 700;
       line-height: 120%; /* 16.8px */
       text-transform: uppercase;
     }
     .note-description {
       text-align: center;
-      font-family: Roboto;
       font-size: 32px;
-      font-style: normal;
       font-weight: 400;
       line-height: 140%; /* 44.8px */
       margin: 16px 0;
       padding: 0px 200px;
+
+      @media (max-width: 768px) {
+        padding: 0; 
+        padding-left: 67px
+      }
     }
     .author {
       color: #000;
-      font-family: Roboto;
-      font-size: 14px;
-      font-style: normal;
       font-weight: 400;
       line-height: 120%; /* 16.8px */
       text-transform: capitalize;
       text-align: center;
-      font-family: Helvetica Now Text;
     }
+  }
+`;
+
+export const hideOnMobile = css`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const hideDesktop = css`
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
