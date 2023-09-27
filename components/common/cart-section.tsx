@@ -9,7 +9,7 @@ const CartSection = () => {
   const [selectedImage, setSelectedImage] = useState<number>(0);
 
   const size = useSelector((state: any) => state.size);
-  const color = useSelector((state: any) => state.size);
+  const color = useSelector((state: any) => state.color);
 
   const dispatch = useDispatch();
 

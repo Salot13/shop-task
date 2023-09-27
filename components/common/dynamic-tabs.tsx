@@ -6,7 +6,7 @@ import { AppBar, Box, Tab, Tabs, Typography } from '@mui/material';
 
 import { tabPanel, tabsDescription } from '.';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from '../../contexts/actions/counterActions';
+import { tabSelection } from '../../contexts/actions/counterActions';
 
 interface TabPanelProps {
   children?: ReactNode;
@@ -45,7 +45,7 @@ const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
   
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    dispatch(increment(newValue));
+    dispatch(tabSelection(newValue));
   };
 
   return (

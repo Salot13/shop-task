@@ -5,14 +5,13 @@ const initialState = {
 };
 
 const counterReducer = (state = initialState, action) => {
-  console.log("action", action)
   switch (action.type) {
     case 'TAB_SELECTION':
-      return { count: action.count };
+      return { ...state, count: action.count };
     case 'SIZE_SELECTION':
-      return { ...action, size: action.size };
+      return { ...state, size: action.size };
     case 'COLOR_SELECTION':
-      return { ...action, color: action.color };
+      return { ...state, color: action.color };
     default:
       return state;
   }

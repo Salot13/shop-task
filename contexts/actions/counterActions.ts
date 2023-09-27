@@ -1,20 +1,20 @@
-export const increment = (data) => {
+export const tabSelection = (tab: number) => {
   return {
     type: 'TAB_SELECTION',
-    count: data,
+    selectedTab: tab,
   };
 };
 
-export const sizeSelection = (data) => {
+export const sizeSelection = (size: string) => {
   return {
     type: 'SIZE_SELECTION',
-    size: data,
+    size,
   };
 };
 
-export const colorselection = (data) => {
+export const colorselection = (color: number) => {
   return {
     type: 'COLOR_SELECTION',
-    color: data,
+    color,
   };
 };
