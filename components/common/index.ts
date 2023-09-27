@@ -36,6 +36,10 @@ export const tabsDescription = css`
   margin-top: 24px;
 `;
 
+export const commonFontstyle = css`
+  font-weight: 700;
+  line-height: 120%;
+`;
 export const cartSection = css`
 
 .cart-section {
@@ -74,8 +78,7 @@ export const cartSection = css`
     align-items: center;
     display: flex;
     gap: 8px;
-    font-weight: 700;
-    line-height: 120%;
+    ${commonFontstyle}
     text-transform: uppercase;
   }
 
@@ -92,8 +95,7 @@ export const cartSection = css`
   }
 
   .product-price {
-    font-weight: 700;
-    line-height: 16.8px;
+  ${commonFontstyle}
     padding-top: 8px;
     text-transform: uppercase;
   }
@@ -102,8 +104,7 @@ export const cartSection = css`
     display: flex;
     margin-top: 24px;
     justify-content: space-between;
-    font-weight: 700;
-    line-height: 120%;
+    ${commonFontstyle}
     text-transform: uppercase;
     
   }
@@ -195,8 +196,7 @@ export const cartSection = css`
 .footerSection .products-name {
   color: #000;
   text-align: center;
-  font-weight: 700;
-  line-height: 120%;
+  ${commonFontstyle}
   text-transform: uppercase;
 }
 

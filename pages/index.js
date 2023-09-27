@@ -22,8 +22,7 @@ export default function Home() {
           item
           lg={4}
           sm={12}
-          sx={{ display: { xs: 'none', sm: 'block' } }}
-          className={hideOnMobile}
+          sx={{ display: { xs: 'none', sm: 'none',md:'none',lg:'flex' } }}
         >
           <div style={{ position: 'sticky', top: '100px', zIndex: 1 }}>
             <DynamicTabs tabs={tabsData} />
