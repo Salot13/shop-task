@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { hideOnMobile, hideDesktop } from '../components/common';
 import CartSection from '../components/common/cart-section';
 import DynamicTabs from '../components/common/dynamic-tabs';
@@ -26,9 +26,12 @@ const HomePage = () => {
         ))}
       </Grid>
       <Grid item lg={4} xs={12} sx={{ minHeight: 540 }} className={hideDesktop}>
-        <div style={{ width: '100% ' }}>
+        <Box
+          display={{ xs: 'block', sm: 'block', md: 'none' }}
+          sx={{ minWidth: '475px', minHeight: 640 }}
+        >
           <ImageSlider />
-        </div>
+        </Box>
       </Grid>
       <Grid item lg={4} sm={12}>
         <div style={{ position: 'sticky', top: '100px', zIndex: 1 }}>

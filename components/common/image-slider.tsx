@@ -6,9 +6,9 @@ import { productImageSliderSettings, productImages } from '../../utils/mock-data
 
 const ImageSlider = () => {
   return (
-    <Slider {...productImageSliderSettings}>
+    <Slider {...productImageSliderSettings} style={{ windth: '100%' }}>
       {productImages.map((image, index) => (
-        <img src={image.src} alt={image.alt}  key={index} />
+        <img src={image.src} alt={image.alt} key={index} />
       ))}
     </Slider>
   );

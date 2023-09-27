@@ -65,6 +65,7 @@ export const tabsData = [
 export const productImages = [
   { src: '../product-image-1.png', alt: 'product-image-1', width: '375px' },
   { src: '../product-image-2.png', alt: 'product-image-2', width: '375px' },
+  { src: '../product-image-5.png', alt: 'product-image-5', width: '420px' },
   { src: '../product-image-4.png', alt: 'product-image-3', width: '375px' },
 ];
 
