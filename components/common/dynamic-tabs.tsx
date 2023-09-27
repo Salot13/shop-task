@@ -42,6 +42,7 @@ const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
   useEffect(() => {
     setValue(count);
   }, [count]);
+  
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
     dispatch(increment(newValue));

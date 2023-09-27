@@ -4,3 +4,17 @@ export const increment = (data) => {
     count: data,
   };
 };
+
+export const sizeSelection = (data) => {
+  return {
+    type: 'SIZE_SELECTION',
+    size: data,
+  };
+};
+
+export const colorselection = (data) => {
+  return {
+    type: 'COLOR_SELECTION',
+    color: data,
+  };
+};

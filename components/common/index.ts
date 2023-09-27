@@ -82,6 +82,13 @@ export const cartSection = css`
   .product-image {
     display: flex;
     padding-top: 8px;
+    img {
+    width: 41.8px;
+    height: 47.824px;
+    }
+    .selected-image {
+        border: 1px solid #000;
+    }
   }
 
   .product-price {

@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { cartSection } from '.';
-
 import { Button, Chip, Typography } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { sizeSelection, colorselection } from '../../contexts/actions/counterActions';
 
 const CartSection = () => {
-  const [selectedSize, setSelectedSize] = useState('');
+  const [selectedSize, setSelectedSize] = useState<string>('L');
+  const [selectedImage, setSelectedImage] = useState<number>(0);
 
-  const handleChipClick = (clickedData) => {
-    setSelectedSize(clickedData);
-    console.log(`Chip clicked! Value: ${clickedData}`);
+  const size = useSelector((state: any) => state.size);
+  const color = useSelector((state: any) => state.size);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    setSelectedSize(size);
+    setSelectedImage(color);
+  }, [size, color]);
+
+  const handleChipClick = (chip: string) => {
+    setSelectedSize(chip);
+    dispatch(sizeSelection(chip));
+  };
+
+  const handleSelectImage = (image: number) => {
+    setSelectedImage(image);
+    dispatch(colorselection(image));
   };
 
   return (
@@ -27,9 +43,16 @@ const CartSection = () => {
           </div>
 
           <div className="product-image">
-            <img src="" alt="first " />
-
-            <img src="" alt="second" />
+            {['../image1.png', '../image 5.png'].map((data, index) => {
+              return (
+                <img
+                  src={data}
+                  alt="first "
+                  onClick={() => handleSelectImage(index)}
+                  className={selectedImage === index ? 'selected-image' : ''}
+                />
+              );
+            })}
           </div>
         </div>
 
