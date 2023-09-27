@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import { productName } from '../../utils/mock-data';
-import { footerSection } from '../common';
+import { footerSection } from './footeStyle';
 
 const Footer = () => {
   return (
