@@ -8,7 +8,7 @@ const ImageSlider = () => {
   return (
     <Slider {...productImageSliderSettings}>
       {productImages.map((image, index) => (
-        <img src={image.src} alt={image.alt} width={image.width} key={index} />
+        <img src={image.src} alt={image.alt}  key={index} />
       ))}
     </Slider>
   );

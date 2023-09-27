@@ -31,12 +31,13 @@ const TabPanel = ({ children, value, index }: TabPanelProps) => {
 
 const DynamicTabs: FC<DynamicTabsProps> = ({ tabs }) => {
   const [tabValue, setTabValue] = useState<number>(0);
-  const count = useSelector((state: { count: number }) => state.count);
+  const selectedTab = useSelector((state: { selectedTab: number }) => state.selectedTab);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setTabValue(count);
-  }, [count]);
+    setTabValue(selectedTab);
+  }, [selectedTab]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);

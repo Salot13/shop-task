@@ -1,5 +1,5 @@
 const initialState = {
-  count: 0,
+  selectedTab: 0,
   size: 'L',
   color: 0,
 };
@@ -7,7 +7,7 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'TAB_SELECTION':
-      return { ...state, count: action.count };
+      return { ...state, selectedTab: action.selectedTab };
     case 'SIZE_SELECTION':
       return { ...state, size: action.size };
     case 'COLOR_SELECTION':

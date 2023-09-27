@@ -76,4 +76,21 @@ export const productImageSliderSettings = {
   autoplaySpeed: 10000,
   slidesToShow: 1,
   slidesToScroll: 1,
+  width: "100%"
 };
+
+
+export const drawerWidth = 240;
+
+export const navItems = [
+  'THE EDIT',
+  'NEW ARRIVALS',
+  'DESIGNERS',
+  'CLOTHING',
+  'SHOES',
+  'BAGS',
+  'ACCESSORIES',
+  'JEWERY',
+  'BEAUTY',
+  'HOME',
+];

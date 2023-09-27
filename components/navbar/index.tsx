@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import {
   AppBar,
   Box,
@@ -15,56 +14,30 @@ import {
   Typography,
   Button,
 } from '@mui/material';
-
 import MenuIcon from '@mui/icons-material/Menu';
-
 import SearchIcon from '@mui/icons-material/Search';
-
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
 import Person4OutlinedIcon from '@mui/icons-material/Person4Outlined';
-
+import { drawerWidth, navItems } from '../../utils/mock-data';
 import { categroiesName, companyName } from '.';
-
-// import SearchIcon from '../../icons/Search.svg';
-
 interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 240;
-
-const navItems = [
-  'THE EDIT',
-
-  'NEW ARRIVALS',
-  'DESIGNERS',
-  'CLOTHING',
-  'SHOES',
-  'BAGS',
-  'ACCESSORIES',
-  'JEWERY',
-  'BEAUTY',
-  'HOME',
-];
-
 const NavBar = (props: Props) => {
   const { window } = props;
-
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         MY COMPANY.COM
       </Typography>
-
       <Divider />
-
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -76,24 +49,16 @@ const NavBar = (props: Props) => {
       </List>
     </Box>
   );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-
       <AppBar component="nav" sx={{ backgroundColor: '#FFFFFF', boxShadow: 'none' }}>
         <Toolbar
           sx={{
             color: '#000000',
-
             backgroundColor: '#FFFFFF',
-
             display: 'flex',
-
             mx: { lg: '71px', sm: '18px' },
-
             justifyContent: 'space-between',
           }}
         >
@@ -107,7 +72,6 @@ const NavBar = (props: Props) => {
               MY COMPANY.NAME
             </Typography>
           </Box>
-
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
               <Button
@@ -123,7 +87,6 @@ const NavBar = (props: Props) => {
               </Button>
             ))}
           </Box>
-
           <Box sx={{ display: 'flex', cursor: 'pointer', alignItems: 'center' }}>
             <SearchIcon />
             <ShoppingCartOutlinedIcon />
@@ -135,14 +98,13 @@ const NavBar = (props: Props) => {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none', md: 'flex', lg: "none" } }}
+              sx={{ mr: 2, display: { sm: 'none', md: 'flex', lg: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
-
       <nav>
         <Drawer
           container={container}
@@ -155,7 +117,6 @@ const NavBar = (props: Props) => {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
