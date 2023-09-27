@@ -69,6 +69,10 @@ export const productImages = [
   { src: '../product-image-4.png', alt: 'product-image-3', width: '375px' },
 ];
 
+export const productColorImages = ['../product-image-1.png', '../product-image-2.png'];
+
+export const productSize = ['XS', 'S', 'M', 'L', 'XXL'];
+
 export const productImageSliderSettings = {
   dots: true,
   infinite: true,
@@ -77,9 +81,8 @@ export const productImageSliderSettings = {
   autoplaySpeed: 10000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  width: "100%"
+  width: '100%',
 };
-
 
 export const drawerWidth = 240;
 

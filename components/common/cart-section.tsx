@@ -3,6 +3,7 @@ import { cartSection } from '.';
 import { Button, Chip, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { sizeSelection, colorselection } from '../../contexts/actions/counterActions';
+import { productColorImages, productSize } from '../../utils/mock-data';
 
 const CartSection = () => {
   const [selectedSize, setSelectedSize] = useState<string>('L');
@@ -43,11 +44,12 @@ const CartSection = () => {
           </div>
 
           <div className="product-image">
-            {['../product-image-1.png', '../product-image-2.png'].map((data, index) => {
+            {productColorImages.map((data, index) => {
               return (
                 <img
+                  key={index}
                   src={data}
-                  alt="first "
+                  alt="product-image "
                   onClick={() => handleSelectImage(index)}
                   className={selectedImage === index ? 'selected-image' : ''}
                 />
@@ -65,7 +67,7 @@ const CartSection = () => {
         </div>
 
         <div style={{ display: 'flex' }}>
-          {['XS', 'S', 'M', 'L', 'XXL'].map((data) => (
+          {productSize.map((data, index) => (
             <div
               style={{
                 marginRight: 12,
@@ -74,6 +76,7 @@ const CartSection = () => {
                 marginTop: '11px',
                 flexWrap: 'wrap',
               }}
+              key={index}
             >
               {data !== 'M' && (
                 <Chip
