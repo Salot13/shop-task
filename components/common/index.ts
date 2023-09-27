@@ -280,8 +280,7 @@ export const footerSection = css`
       padding: 0px 200px;
 
       @media (max-width: 768px) {
-        padding: 0; 
-        padding-left: 67px
+        padding: 18px; 
       }
     }
     .author {

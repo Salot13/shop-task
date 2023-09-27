@@ -116,7 +116,7 @@ const NavBar = (props: Props) => {
                 sx={{
                   color: '#000000',
                   fontFamily: 'Helvetica Now Text',
-                  ':hover': { textDecoration: 'underLine', },
+                  ':hover': { textDecoration: 'underLine' },
                 }}
               >
                 {item}
@@ -124,23 +124,22 @@ const NavBar = (props: Props) => {
             ))}
           </Box>
 
-          <Box sx={{ display: 'flex', cursor: 'pointer' }}>
+          <Box sx={{ display: 'flex', cursor: 'pointer', alignItems: 'center' }}>
             <SearchIcon />
             <ShoppingCartOutlinedIcon />
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Box sx={{ display: { xs: 'none', sm: 'block', lg: 'flex' }, alignItems: 'center' }}>
               <Person4OutlinedIcon />
             </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
           </Box>
-
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
         </Toolbar>
       </AppBar>
 

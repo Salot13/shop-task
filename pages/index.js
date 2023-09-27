@@ -42,7 +42,7 @@ export default function Home() {
             />
           ))}
         </Grid>
-        <Grid item lg={4} sm={12} sx={{ width: '500px', minHeight: 800 }} className={hideDesktop}>
+        <Grid item lg={4} xs={12} sx={{ width: '100%', minHeight: 540 }} className={hideDesktop}>
           <ImageSlider />
         </Grid>
         <Grid item lg={4} sm={12}>

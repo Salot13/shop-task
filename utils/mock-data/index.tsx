@@ -63,7 +63,7 @@ export const tabsData = [
   { label: 'Share', content: <Typography>Content of Tab 3</Typography> },
 ];
 export const images = [
-  { src: '../image1.png', alt: 'product-image1', width: '462px' },
-  { src: '../image 2.png', alt: 'product-image2', width: '462px' },
-  { src: '../image 3.png', alt: 'product-image3', width: '562px' },
+  { src: '../image1.png', alt: 'product-image1', width: '375px' },
+  { src: '../image 2.png', alt: 'product-image2', width: '375px' },
+  { src: '../image 3.png', alt: 'product-image3', width: '375px' },
 ];
