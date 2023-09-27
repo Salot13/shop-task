@@ -19,7 +19,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import UserIcon from '@mui/icons-material/Person4Outlined';
 import { drawerWidth, navItems } from '../../utils/mock-data';
-import { categroiesName, companyName } from '.';
+import { categroiesName, companyName } from './navbarStyle';
 interface Props {
   window?: () => Window;
 }

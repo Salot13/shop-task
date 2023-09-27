@@ -1,7 +1,7 @@
 'use client';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import { AppBar, Box, Tab, Tabs } from '@mui/material';
-import { tabPanel, tabsDescription } from '.';
+import { tabPanel, tabsDescription } from './commonStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { tabSelection } from '../../contexts/actions/counterActions';
 

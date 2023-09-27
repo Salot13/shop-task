@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React, { useEffect, useState } from 'react';
-import { cartSection } from '.';
+import { cartSection } from './commonStyle';
 import { Button, Chip, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { sizeSelection, colorselection } from '../../contexts/actions/counterActions';

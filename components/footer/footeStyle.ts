@@ -1,5 +1,5 @@
 import { css } from '@emotion/css';
-import { commonFontstyle } from '../common';
+import { commonFontstyle } from '../common/commonStyle';
 
 export const footerSection = css`
   min-width:500px;

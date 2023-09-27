@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Grid, IconButton } from '@mui/material';
-import { hideOnMobile, hideDesktop } from '../components/common';
+import { hideOnMobile, hideDesktop } from '../components/common/commonStyle';
 import CartSection from '../components/common/cart-section';
 import DynamicTabs from '../components/common/dynamic-tabs';
 import ImageSlider from '../components/common/image-slider';

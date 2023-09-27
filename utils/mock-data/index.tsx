@@ -92,13 +92,13 @@ export const tabsData = [
   },
 ];
 export const productImages = [
-  { src: '../product-image-1.png', alt: 'product-image-1', width: '375px' },
-  { src: '../product-image-5.png', alt: 'product-image-5', width: '420px' },
-  { src: '../product-image-2.png', alt: 'product-image-2', width: '375px' },
-  { src: '../product-image-4.png', alt: 'product-image-3', width: '375px' },
+  { src: '../images/product-image-1.png', alt: 'product-image-1', width: '375px' },
+  { src: '../images/product-image-5.png', alt: 'product-image-5', width: '420px' },
+  { src: '../images/product-image-2.png', alt: 'product-image-2', width: '375px' },
+  { src: '../images/product-image-4.png', alt: 'product-image-3', width: '375px' },
 ];
 
-export const productColorImages = ['../product-image-1.png', '../product-image-2.png'];
+export const productColorImages = ['../images/product-image-1.png', '../images/product-image-2.png'];
 
 export const productSize = ['XS', 'S', 'M', 'L', 'XXL'];
 
