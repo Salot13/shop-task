@@ -43,7 +43,7 @@ const CartSection = () => {
           </div>
 
           <div className="product-image">
-            {['../image1.png', '../image 5.png'].map((data, index) => {
+            {['../product-image-1.png', '../product-image-2.png'].map((data, index) => {
               return (
                 <img
                   src={data}

@@ -62,8 +62,18 @@ export const tabsData = [
 
   { label: 'Share', content: <Typography>Content of Tab 3</Typography> },
 ];
-export const images = [
-  { src: '../image1.png', alt: 'product-image1', width: '375px' },
-  { src: '../image 2.png', alt: 'product-image2', width: '375px' },
-  { src: '../image 3.png', alt: 'product-image3', width: '375px' },
+export const productImages = [
+  { src: '../product-image-1.png', alt: 'product-image-1', width: '375px' },
+  { src: '../product-image-2.png', alt: 'product-image-2', width: '375px' },
+  { src: '../product-image-4.png', alt: 'product-image-3', width: '375px' },
 ];
+
+export const productImageSliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 200,
+  autoplay: true,
+  autoplaySpeed: 10000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};

@@ -108,7 +108,7 @@ const NavBar = (props: Props) => {
             </Typography>
           </Box>
 
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
               <Button
                 key={item}
@@ -135,7 +135,7 @@ const NavBar = (props: Props) => {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={{ mr: 2, display: { sm: 'none', md: 'flex', lg: "none" } }}
             >
               <MenuIcon />
             </IconButton>

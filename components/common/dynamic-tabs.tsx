@@ -1,22 +1,21 @@
 'use client';
-
-import React, { ReactNode, useEffect } from 'react';
-
-import { AppBar, Box, Tab, Tabs, Typography } from '@mui/material';
-
+import React, { FC, ReactNode, useEffect, useState } from 'react';
+import { AppBar, Box, Tab, Tabs } from '@mui/material';
 import { tabPanel, tabsDescription } from '.';
 import { useDispatch, useSelector } from 'react-redux';
 import { tabSelection } from '../../contexts/actions/counterActions';
 
 interface TabPanelProps {
   children?: ReactNode;
-
   index: number;
-
   value: number;
 }
 
-function TabPanel({ children, value, index }: TabPanelProps) {
+interface DynamicTabsProps {
+  tabs: { label: string; content: ReactNode }[];
+}
+
+const TabPanel = ({ children, value, index }: TabPanelProps) => {
   return (
     <div
       role="tabpanel"
@@ -28,30 +27,26 @@ function TabPanel({ children, value, index }: TabPanelProps) {
       {value === index && <Box className="tab-description">{children}</Box>}
     </div>
   );
-}
+};
 
-interface DynamicTabsProps {
-  tabs: { label: string; content: ReactNode }[];
-}
-
-const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
-  const [value, setValue] = React.useState(0);
-  const count = useSelector((state: any) => state.count);
+const DynamicTabs: FC<DynamicTabsProps> = ({ tabs }) => {
+  const [tabValue, setTabValue] = useState<number>(0);
+  const count = useSelector((state: { count: number }) => state.count);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setValue(count);
+    setTabValue(count);
   }, [count]);
-  
+
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+    setTabValue(newValue);
     dispatch(tabSelection(newValue));
   };
 
   return (
     <div className={tabPanel}>
       <AppBar position="static" className="tab-container">
-        <Tabs value={value} onChange={handleChange} variant="fullWidth" centered>
+        <Tabs value={tabValue} onChange={handleChange} variant="fullWidth" centered>
           {tabs.map((tab, index) => (
             <Tab key={index} label={tab.label} id={`tab-${index}`} />
           ))}
@@ -59,7 +54,7 @@ const DynamicTabs: React.FC<DynamicTabsProps> = ({ tabs }) => {
       </AppBar>
 
       {tabs.map((tab, index) => (
-        <TabPanel key={index} value={value} index={index}>
+        <TabPanel key={index} value={tabValue} index={index}>
           {tab.content}
         </TabPanel>
       ))}
